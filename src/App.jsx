@@ -103,7 +103,7 @@ export default function App() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             // placeholder="Trained on a 60-question ShopEase FAQ PDF. Try asking about Orders, Payments, or Returns!"
-            placeholder='The first response may take up to 60 seconds as the free server wakes up.'
+            placeholder='Type your question here... (First reply may take 60s to load.).'
             disabled={isLoading}
             className="flex-1 bg-[#1e293b] border border-slate-600 text-white rounded-xl px-5 py-3.5 text-[15px] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all disabled:opacity-50"
           />
