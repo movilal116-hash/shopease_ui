@@ -1,0 +1,114 @@
+.ad-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Matches your chat card width */
+  min-height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+}
+
+/* The Breathing Background */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #1e293b, #0f172a, #3b82f6, #8b5cf6);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Content Area */
+.ad-content {
+  text-align: left;
+  color: white;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* The Color Changing Text Effect */
+.highlight-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  /* This is the magic animation */
+  animation: colorShift 6s infinite alternate;
+}
+
+/* Add delays so they don't all change color at the exact same time */
+.delay-1 { animation-delay: 0s; }
+.delay-2 { animation-delay: 1s; }
+.delay-3 { animation-delay: 2s; }
+
+/* The color palette cycle */
+@keyframes colorShift {
+  0% { color: #f8fafc; text-shadow: 0 0 5px rgba(255,255,255,0.2); }
+  33% { color: #60a5fa; text-shadow: 0 0 10px rgba(96, 165, 250, 0.6); } /* Blue */
+  66% { color: #a78bfa; text-shadow: 0 0 10px rgba(167, 139, 250, 0.6); } /* Purple */
+  100% { color: #f8fafc; text-shadow: 0 0 5px rgba(255,255,255,0.2); }
+}
+
+/* Freelance Call to Action */
+.freelance-cta {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.freelance-cta p {
+  margin: 0 0 8px 0;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.sub-text {
+  font-size: 13px !important;
+  color: #94a3b8 !important;
+  margin-bottom: 15px !important;
+  line-height: 1.5;
+}
+
+/* Hire Button */
+.hire-btn {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hire-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
