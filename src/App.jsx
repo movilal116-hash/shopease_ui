@@ -133,8 +133,8 @@ export default function App() {
               <li className="flex items-center gap-1"><span className="text-blue-400 text-lg">✓</span> I read your business PDF</li>
               <li className="flex items-center gap-1"><span className="text-blue-400 text-lg">✓</span> I organize your data so the AI can find it instantly</li>
               <li className="flex items-center gap-1"><span className="text-blue-400 text-lg">✓</span> When a customer asks a question, the AI searches your PDF, reads the exact answer, and replies to the customer safely.</li>
-              <li className="flex items-center gap-1"><span className="text-blue-400 text-lg">✓</span> No hallucinations</li>
-              <li className="flex items-center gap-1"><span className="text-blue-400 text-lg">✓</span> Safe & Reliable</li>
+              <li className="flex items-center gap-1"><span className="text-blue-400 text-lg">✓</span> Answers only from your document</li>
+              <li className="flex items-center gap-1"><span className="text-blue-400 text-lg">✓</span> Says "I don't know" when not covered</li>
             </ul>
           </div>
 
