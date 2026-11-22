@@ -4,8 +4,9 @@ import './AddBanner.css';
 export default function AddBanner() {
   const phrases = [
     "I read your business PDF.",
-    "I organize your data so the AI can find it instantly.",
-    "When a customer asks a question, the AI reads the exact answer and replies safely."
+    "I organize your data so the AI can find it instantly."
+    // "When a customer asks a question, the AI reads the exact answer and replies safely.",
+    // "Hiii"
   ];
 
   const [currentText, setCurrentText] = useState('');

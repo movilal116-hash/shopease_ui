@@ -15,7 +15,7 @@ export default function SignUp({ onSwitchToLogin, onLogin }) {
 
     try {
       // 1. Register the user in MySQL
-      await axios.post('http://127.0.0.1:8000/auth/register', {
+      await axios.post(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/auth/register`, {
         name: name,
         email: email,
         password: password
@@ -27,7 +27,8 @@ export default function SignUp({ onSwitchToLogin, onLogin }) {
       formData.append('password', password);
       
       const loginResponse = await axios.post(
-        'http://127.0.0.1:8000/auth/login', 
+        // 'http://127.0.0.1:8000/auth/login', 
+        `${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/auth/login`,
         formData,
         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
       );

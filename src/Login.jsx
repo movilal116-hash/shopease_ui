@@ -18,7 +18,8 @@ export default function Login({ onSwitchToSignUp, onLogin }) {
       formData.append('password', password);
 
       const response = await axios.post(
-        'http://127.0.0.1:8000/auth/login', 
+        // 'https://shopease-ai-faq-backend.onrender.com/auth/login', 
+        `${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/auth/login`,
         formData,
         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
       );
